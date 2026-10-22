@@ -71,3 +71,12 @@ if __name__ == "__main__":
     test_course_methods()
     test_file_loader()
     
+
+    c = Course("X")
+c.add_student("Ali", 88)
+c.remove_student("Ali")
+print(len(c))
+try:
+    c.remove_student("Zara")
+except KeyError as e:
+    print("KeyError:", e)
