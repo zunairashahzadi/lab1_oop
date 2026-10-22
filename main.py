@@ -70,3 +70,4 @@ if __name__ == "__main__":
     test_student_class()
     test_course_methods()
     test_file_loader()
+    
