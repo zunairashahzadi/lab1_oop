@@ -6,6 +6,13 @@ class InvalidMarksError(Exception):
 class Course:
     """A course that stores students and their marks."""
 
+    def remove_student(self, name: str) -> None:
+        """Remove a student, or raise KeyError if missing."""
+        if name not in self.marks:
+            raise KeyError(f"No student named {name}")
+        del self.marks[name]
+
+        
     def __init__(self, name):
         self.name = name
         self.marks = {}
